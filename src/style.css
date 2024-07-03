@@ -38,6 +38,7 @@ so this is static html
     --main-color:#D9A026;
     --second-color:#E1B351;
     --third-color: #265fd9;
+    --fourth-color: #d4b36c;
 }
 
 
@@ -47,9 +48,4 @@ so this is static html
     display: grid;
     grid-template-rows: repeat(4,1fr);
     grid-template-columns: repeat(4,1fr);
-}
-
-
-.grid-items{
-    border:2px solid red;
 }
