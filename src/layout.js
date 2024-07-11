@@ -29,7 +29,6 @@ function createTaskPanel(){
     taskPanel.classList.add("taskPanel");
     content.appendChild(taskPanel);
     taskPanel.style.gridArea = "tp";
-    taskPanel.style.border= "2px solid black"
 }
 
 function loadRegularGrid(){
@@ -38,8 +37,29 @@ function loadRegularGrid(){
     "sb tp tp tp"
     "sb tp tp tp"
     "sb tp tp tp"
-    `
-
+    `;
+    console.log("Loaded regular grid");
 }
 
-export { layoutConCheck, loadRegularGrid, createSideBar, createTaskPanel}
+function loadProjectGrid(){
+    content.style.gridTemplateAreas = `
+    "sb sb sb tp"
+    "sb sb sb tp"
+    "sb sb sb tp"
+    "sb sb sb tp"
+    `;
+    console.log("Loaded Project grid");
+}
+
+/*
+function loadMobileGrid(){
+    content.style.gridTemplateAreas = `
+    "sb tp tp tp"
+    "sb tp tp tp"
+    "sb tp tp tp"
+    "sb tp tp tp"
+    `
+}
+    */
+
+export { layoutConCheck, loadRegularGrid, createSideBar, createTaskPanel, loadProjectGrid}
