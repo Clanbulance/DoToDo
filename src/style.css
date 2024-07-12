@@ -47,5 +47,5 @@ so this is static html
     width: 100vw;
     display: grid;
     grid-template-rows: repeat(4,1fr);
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: 1fr 2fr 2fr 2fr;
 }
