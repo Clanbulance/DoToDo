@@ -18,10 +18,14 @@ loadMobileGrid  -- this would be for mobile version. let's skip this for the beg
 function createSideBar(){
     const sideBar = document.createElement("div");
     sideBar.classList.add("sideBar");
-    console.log("sideBar created")
+    console.log("sideBar created");
     content.appendChild(sideBar);
     sideBar.style.gridArea = "sb"
     sideBar.style.backgroundColor = "var(--fourth-color)"
+    sideBar.style.display = "grid";
+    sideBar.style.gridTemplateColumns = "1fr";
+    sideBar.style.gridTemplateRows = "repeat(4,1fr)"
+    sideBar.style.padding = "12px"
 };  
 
 function createTaskPanel(){
@@ -43,23 +47,25 @@ function loadRegularGrid(){
 
 function loadProjectGrid(){
     content.style.gridTemplateAreas = `
-    "sb sb sb tp"
-    "sb sb sb tp"
-    "sb sb sb tp"
-    "sb sb sb tp"
+    "sb sb tp tp"
+    "sb sb tp tp"
+    "sb sb tp tp"
+    "sb sb tp tp"
     `;
     console.log("Loaded Project grid");
 }
 
-/*
+
+/* 
 function loadMobileGrid(){
     content.style.gridTemplateAreas = `
-    "sb tp tp tp"
-    "sb tp tp tp"
-    "sb tp tp tp"
-    "sb tp tp tp"
+    "sb sb sb sb"
+    "tp tp tp tp"
+    "tp tp tp tp"
+    "tp tp tp tp"
     `
 }
-    */
+    */ 
 
-export { layoutConCheck, loadRegularGrid, createSideBar, createTaskPanel, loadProjectGrid}
+
+export {layoutConCheck, loadRegularGrid, createSideBar, createTaskPanel, loadProjectGrid}
