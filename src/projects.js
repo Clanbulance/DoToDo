@@ -16,6 +16,7 @@ function projectsCheck(){
 }
 const sideBarArea = document.querySelector(".sideBar");
 
+/* this is the "add project button" */ 
 function addProjectButton() {
     const sideBarArea = document.querySelector(".sideBar");
     const projectButton = document.createElement("div");
@@ -30,5 +31,29 @@ function addProjectButton() {
     sideBarArea.appendChild(projectButton);
 }
 
+/*addeventlistener on button  is in main.js*/
 
-export {addProjectButton, projectsCheck}; 
+/* class for Projects */
+class Project {
+    constructor(name,start,tasknumber){
+        this.name = name;
+        this.start = Date.now();
+        this.task = [];
+        this.tasknumber = this.task.length;
+    }
+    get age(){
+        return this.calcAge()
+    }
+    calcAge(){
+        return (Date.now() - this.start)/1000;
+    };
+}
+
+/*open a form to add different projects*/
+function addProject(){
+
+}
+
+
+
+export {addProjectButton, projectsCheck, Project}; 
