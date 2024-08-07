@@ -8,7 +8,7 @@ this object will be added to an array of objects
 
 */
 
-
+let projects = [];
 
 
 function projectsCheck(){
@@ -39,7 +39,7 @@ class Project {
         this.name = name;
         this.start = Date.now();
         this.task = [];
-        this.tasknumber = this.task.length;
+        
     }
     get age(){
         return this.calcAge()
@@ -49,6 +49,33 @@ class Project {
     };
 }
 
+
+/*Display a square for every project 
+    Send this to the sideBar div which is a grid box*/
+
+function createSquares(array){
+    console.log("step 1 --before loop"); 
+    console.log(array);
+    array.forEach((element) => {
+        console.log(`step 2 --in loop`); 
+        const sideBarArea = document.querySelector(".sideBar");
+        const projectSquare = document.createElement("div");
+        projectSquare.classList.add("projectButton");
+        projectSquare.style.border = "3px solid black";
+        projectSquare.style.borderRadius = "5%";
+        projectSquare.style.backgroundColor = "var(--third-color)"
+        projectSquare.innerText = `${element.name}`;
+        projectSquare.style.justifyContent = "center";
+        projectSquare.style.alignItems = "center";
+        projectSquare.style.display = "grid";
+        sideBarArea.appendChild(projectSquare);
+        console.log(`step 3 --finished`); 
+    });
+};
+
+
+
+
 /*open a form to add different projects*/
 function addProject(){
 
@@ -56,4 +83,4 @@ function addProject(){
 
 
 
-export {addProjectButton, projectsCheck, Project}; 
+export {addProjectButton, projectsCheck, Project, projects, createSquares}; 
