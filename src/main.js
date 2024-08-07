@@ -1,9 +1,9 @@
 // this is going to be the main js module to start loading things
 import {layoutConCheck, loadRegularGrid, createSideBar, createTaskPanel, loadProjectGrid} from "./layout";
-import {addProjectButton, projectsCheck, Project} from "./projects";
+import {addProjectButton, projectsCheck, Project, projects, createSquares} from "./projects";
 import "./style.css";
 
-
+console.log("main.js is being loaded");
 layoutConCheck();
 projectsCheck(); 
 createSideBar()
@@ -25,15 +25,15 @@ ProjectButton.addEventListener("click", (e) => {
 
 let test = "banana"
 const checksome = new Project("Network");
+projects.push(checksome);
 
-console.log(checksome);
-console.log(checksome.age);
+checksome.task.push({id: "task1", descritption: "do this"},{id: "task2", descritption: "do that"});
 
-checksome.age.addEventListener("change",() => {
-    console.log(checksome.age);
-})
+createSquares(projects);
 
 
 
-console.log("main.js is being loaded");
+
+
+
  
