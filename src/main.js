@@ -15,12 +15,7 @@ addProjectButton();
 // This is making the sidebar responding to projects or to tasks
 
 const sidebar = document.querySelector(".sideBar");
-const ProjectButton = document.querySelector(".projectButton");
-sidebar.addEventListener("click", loadProjectGrid, true);
-sidebar.addEventListener("mouseleave",loadRegularGrid);
-ProjectButton.addEventListener("click", (e) => {
-    console.log(`${e.currentTarget.classList} is clicked`);
-}); 
+
 
 
 let test = "banana"
@@ -31,7 +26,12 @@ checksome.task.push({id: "task1", descritption: "do this"},{id: "task2", descrit
 
 createSquares(projects);
 
+const ProjectButton = document.querySelectorAll(".projectButton");
 
+ProjectButton.forEach((elem) => elem.addEventListener("click", (e) => {
+    console.log(`${e.currentTarget.classList} is clicked`);
+})
+); 
 
 
 

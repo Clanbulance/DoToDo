@@ -23,9 +23,10 @@ function createSideBar(){
     sideBar.style.gridArea = "sb"
     sideBar.style.backgroundColor = "var(--fourth-color)"
     sideBar.style.display = "grid";
-    sideBar.style.gridTemplateColumns = "1fr";
+    sideBar.style.gridTemplateColumns = "1fr";""
     sideBar.style.gridTemplateRows = "repeat(4,1fr)"
     sideBar.style.padding = "12px"
+    sideBar.style.gridGap = "12px"
 };  
 
 function createTaskPanel(){
@@ -45,6 +46,7 @@ function loadRegularGrid(){
     console.log("Loaded regular grid");
 }
 
+
 function loadProjectGrid(){
     content.style.gridTemplateAreas = `
     "sb sb tp tp"
@@ -54,6 +56,7 @@ function loadProjectGrid(){
     `;
     console.log("Loaded Project grid");
 }
+    
 
 
 /* 
