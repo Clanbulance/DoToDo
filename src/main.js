@@ -1,5 +1,5 @@
 // this is going to be the main js module to start loading things
-import {layoutConCheck, loadRegularGrid, createSideBar, createTaskPanel, loadProjectGrid} from "./layout";
+import {layoutConCheck, loadRegularGrid, createSideBar, createTaskPanel, loadMobileGrid} from "./layout";
 import {addProjectButton, projectsCheck, Project, projects, createSquares} from "./projects";
 import "./style.css";
 
@@ -33,6 +33,14 @@ ProjectButton.forEach((elem) => elem.addEventListener("click", (e) => {
 })
 ); 
 
+window.addEventListener('resize', function(){
+    if(window.innerWidth < 520){
+        loadMobileGrid();
+        console.log("screen smoll")
+    } else {
+        loadRegularGrid();
+    }
+});
 
 
 

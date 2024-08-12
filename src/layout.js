@@ -45,30 +45,13 @@ function loadRegularGrid(){
     `;
     console.log("Loaded regular grid");
 }
-
-
-function loadProjectGrid(){
-    content.style.gridTemplateAreas = `
-    "sb sb tp tp"
-    "sb sb tp tp"
-    "sb sb tp tp"
-    "sb sb tp tp"
-    `;
-    console.log("Loaded Project grid");
-}
-    
-
-
-/* 
+ 
 function loadMobileGrid(){
     content.style.gridTemplateAreas = `
     "sb sb sb sb"
     "tp tp tp tp"
     "tp tp tp tp"
     "tp tp tp tp"
-    `
+    `;
 }
-    */ 
-
-
-export {layoutConCheck, loadRegularGrid, createSideBar, createTaskPanel, loadProjectGrid}
+export {layoutConCheck, loadRegularGrid, createSideBar, createTaskPanel, loadMobileGrid}
