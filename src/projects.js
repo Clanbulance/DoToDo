@@ -20,6 +20,7 @@ const sideBarArea = document.querySelector(".sideBar");
 
 /* this is the "add project button" */ 
 function addProjectButton() {
+    console.log("prjbtn step - 1 ")
     const sideBarArea = document.querySelector(".sideBar");
     const projectButton = document.createElement("div");
     projectButton.classList.add("projectButton");
@@ -34,6 +35,7 @@ function addProjectButton() {
     projectButton.addEventListener("click", ()=>{
         newProject();
     })
+    console.log("prjbtn step - 2")
 }
 
 

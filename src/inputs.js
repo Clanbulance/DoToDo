@@ -9,12 +9,13 @@ console.log("let's run this shit")
     inputBox.style.opacity = "100%";
     inputBox.classList.add("inputBox")
     inputBox.style.border = "3px solid black";
-    inputBox.style.borderRadius = "5%";
+    inputBox.style.borderRadius = "3%";
     inputBox.style.backgroundColor = "var(--third-color)"
     inputBox.style.position = "absolute";
     inputBox.style.left = "50%";
     inputBox.style.top = "50%";
-    inputBox.style.transform = "translate(-50%,-50%)"
+    inputBox.style.transform = "translate(-50%,-50%)";
+    inputBox.style.padding = "20px";
     
     // Create the Form element
     const form = document.createElement('form');
@@ -60,8 +61,17 @@ const makeProject = function(event){
         let newProject = new Project(projectTitle);
         projects.push(newProject);
         document.querySelector(".sideBar").innerHTML = "";
-        addProjectButton;
         createSquares(projects);
+        removeInputScreen(".inputBox");
 }
+
+function removeInputScreen(element){
+    document.querySelector(element).remove();
+    document.querySelector(".content").style.opacity = "100%";
+    addProjectButton
+
+}
+
+
 
 export {newProject, makeProject}
