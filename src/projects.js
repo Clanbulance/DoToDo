@@ -1,3 +1,5 @@
+import { newProject, makeProject} from "./inputs";
+
 /*
 This module wil be used to populate the project bar
 First we need to create the Add project button
@@ -29,7 +31,13 @@ function addProjectButton() {
     projectButton.style.alignItems = "center";
     projectButton.style.display = "grid";
     sideBarArea.appendChild(projectButton);
+    projectButton.addEventListener("click", ()=>{
+        newProject();
+    })
 }
+
+
+
 
 /*addeventlistener on button  is in main.js*/
 
@@ -77,10 +85,6 @@ function createSquares(array){
 
 
 /*open a form to add different projects*/
-function addProject(){
-
-}
-
 
 
 export {addProjectButton, projectsCheck, Project, projects, createSquares}; 
