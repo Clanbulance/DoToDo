@@ -38,9 +38,6 @@ function addProjectButton() {
     console.log("prjbtn step - 2")
 }
 
-
-
-
 /*addeventlistener on button  is in main.js*/
 
 /* class for Projects */

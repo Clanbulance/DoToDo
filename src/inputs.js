@@ -61,6 +61,7 @@ const makeProject = function(event){
         let newProject = new Project(projectTitle);
         projects.push(newProject);
         document.querySelector(".sideBar").innerHTML = "";
+        addProjectButton();
         createSquares(projects);
         removeInputScreen(".inputBox");
 }
@@ -68,8 +69,6 @@ const makeProject = function(event){
 function removeInputScreen(element){
     document.querySelector(element).remove();
     document.querySelector(".content").style.opacity = "100%";
-    addProjectButton
-
 }
 
 
