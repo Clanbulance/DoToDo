@@ -2,13 +2,15 @@
 import {layoutConCheck, loadRegularGrid, createSideBar, createTaskPanel, loadMobileGrid} from "./layout";
 import {addProjectButton, projectsCheck, Project, projects, createSquares} from "./projects";
 import {newProject } from "./inputs";
+import {taskCheck} from "./tasks"
 import "./style.css";
 
 console.log("main.js is being loaded");
-layoutConCheck();
-projectsCheck(); 
-createSideBar()
-createTaskPanel();
+layoutConCheck() 
+projectsCheck() 
+taskCheck() 
+createSideBar() 
+createTaskPanel()
 loadRegularGrid();
 addProjectButton();
 

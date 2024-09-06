@@ -8,6 +8,10 @@ In case this is clicked, a form will open to create a project
 through a prototype/class function 
 this object will be added to an array of objects
 
+This Module is also exporting the activeProject value, this
+can be used in the task module to add and load the tasks from 
+the correct Project
+
 */
 
 let projects = [];
@@ -59,6 +63,7 @@ class Project {
 
 /*Display a square for every project 
     Send this to the sideBar div which is a grid box*/
+let activeProject;
 
 function createSquares(array){
     console.log("step 1 --before loop"); 
@@ -76,7 +81,11 @@ function createSquares(array){
         projectSquare.style.alignItems = "center";
         projectSquare.style.display = "grid";
         sideBarArea.appendChild(projectSquare);
-        console.log(`step 3 --finished`); 
+        console.log(`step 3 --finished`);
+        projectSquare.addEventListener("click",function(){
+            activeProject = projectSquare.innerText
+            console.log(`The activeProject is: ${activeProject}`)
+        })
     });
 };
 
@@ -86,4 +95,4 @@ function createSquares(array){
 /*open a form to add different projects*/
 
 
-export {addProjectButton, projectsCheck, Project, projects, createSquares}; 
+export {addProjectButton, projectsCheck, Project, projects, createSquares, activeProject}; 
